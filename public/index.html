@@ -17,7 +17,7 @@
       <div class="items-center justify-between md:flex">
         <h1 class="font-bold">Shoe<span class="text-red-600">Brand</span></h1>
         <div
-        id="nav-items"
+          id="nav-items"
           class="hidden absolute bg-white w-auto h-64 top-0 right-0 space-x-12 pr-24 md:flex md:static md:bg-transparent md:h-fit"
         >
           <svg
@@ -146,9 +146,15 @@
 
     <script>
       const menu = document.getElementById("menu");
-      const nav_items =document.getElementById("nav-items")
+      const close = document.getElementById("close");
+      const nav_items = document.getElementById("nav-items");
+
       menu.addEventListener("click", () => {
-        nav_items.classList.toggle('hidden')
+        nav_items.classList.toggle("hidden");
+      });
+
+      close.addEventListener("click", () => {
+        nav_items.classList.toggle("hidden");
       });
     </script>
   </body>
