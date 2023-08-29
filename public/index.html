@@ -8,7 +8,7 @@
   </head>
   <body class="font-Raleway overflow-y-scroll">
     <!-- Navigation -->
-    <nav class="relative z-1 container mx-auto pt-5 mb-10">
+    <nav class="z-1 container mx-auto pt-5 mb-10">
       <img
         src="./img/shoe1.jpg"
         alt=""
@@ -16,12 +16,47 @@
       />
       <div class="items-center justify-between md:flex">
         <h1 class="font-bold">Shoe<span class="text-red-600">Brand</span></h1>
-        <div class="hidden justify-around space-x-12 pr-24 md:flex">
-          <a href="#" class="text-white">Home</a>
-          <a href="#" class="text-white">Sneakers</a>
-          <a href="#" class="text-white">Players</a>
+        <div
+        id="nav-items"
+          class="hidden absolute bg-white w-auto h-64 top-0 right-0 space-x-12 pr-24 md:flex md:static md:bg-transparent md:h-fit"
+        >
+          <svg
+            id="close"
+            class="w-5 h-8 ml-40 md:hidden"
+            viewBox="0 0 896 896"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M448 0C566.817 0 680.768 47.1999 764.784 131.216C848.8 215.232 896 329.183 896 448C896 566.817 848.8 680.768 764.784 764.784C680.768 848.8 566.817 896 448 896C329.183 896 215.232 848.8 131.216 764.784C47.1999 680.768 0 566.817 0 448C0 329.183 47.1999 215.232 131.216 131.216C215.232 47.1999 329.183 0 448 0V0ZM448 393.664L343.936 289.6C336.731 282.395 326.958 278.347 316.768 278.347C306.578 278.347 296.805 282.395 289.6 289.6C282.395 296.805 278.347 306.578 278.347 316.768C278.347 326.958 282.395 336.731 289.6 343.936L393.664 448L289.6 552.064C286.032 555.632 283.202 559.867 281.271 564.529C279.34 569.19 278.347 574.186 278.347 579.232C278.347 584.278 279.34 589.274 281.271 593.935C283.202 598.597 286.032 602.832 289.6 606.4C293.168 609.968 297.403 612.798 302.065 614.729C306.726 616.66 311.722 617.653 316.768 617.653C321.814 617.653 326.81 616.66 331.471 614.729C336.133 612.798 340.368 609.968 343.936 606.4L448 502.336L552.064 606.4C555.632 609.968 559.867 612.798 564.529 614.729C569.19 616.66 574.186 617.653 579.232 617.653C584.278 617.653 589.274 616.66 593.935 614.729C598.597 612.798 602.832 609.968 606.4 606.4C609.968 602.832 612.798 598.597 614.729 593.935C616.66 589.274 617.653 584.278 617.653 579.232C617.653 574.186 616.66 569.19 614.729 564.529C612.798 559.867 609.968 555.632 606.4 552.064L502.336 448L606.4 343.936C609.968 340.368 612.798 336.133 614.729 331.471C616.66 326.81 617.653 321.814 617.653 316.768C617.653 311.722 616.66 306.726 614.729 302.065C612.798 297.403 609.968 293.168 606.4 289.6C602.832 286.032 598.597 283.202 593.935 281.271C589.274 279.34 584.278 278.347 579.232 278.347C574.186 278.347 569.19 279.34 564.529 281.271C559.867 283.202 555.632 286.032 552.064 289.6L448 393.664Z"
+              fill="black"
+            />
+          </svg>
+          <a
+            href="#"
+            class="p-4 text-black md:text-white md:p-0 block ml-12 md:ml-0"
+            >Home</a
+          >
+          <a href="#" class="p-4 text-black md:text-white md:p-0 block"
+            >Sneakers</a
+          >
+          <a href="#" class="p-4 text-black md:text-white md:p-0 block"
+            >Players</a
+          >
         </div>
       </div>
+      <svg
+        id="menu"
+        class="h-4 w-4 mr-3 absolute right-0 top-6 md:hidden"
+        viewBox="0 0 48 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M24 32H0V26.6667H24V32ZM48 18.6667H0V13.3333H48V18.6667ZM48 5.33333H24V0H48V5.33333Z"
+          fill="white"
+        />
+      </svg>
     </nav>
 
     <!-- Hero section -->
@@ -108,5 +143,13 @@
         </div>
       </div>
     </section>
+
+    <script>
+      const menu = document.getElementById("menu");
+      const nav_items =document.getElementById("nav-items")
+      menu.addEventListener("click", () => {
+        nav_items.classList.toggle('hidden')
+      });
+    </script>
   </body>
 </html>
